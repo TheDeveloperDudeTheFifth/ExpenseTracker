@@ -6,7 +6,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.19">
+        android:layout_weight="0.06">
 
         <EditText
             android:layout_width="wrap_content"
@@ -25,12 +25,7 @@
             android:ems="10"
             android:id="@+id/outputBudget"
             android:editable="true" />
+
     </LinearLayout>
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:text="Letzte Transaktionen"
-        android:textAlignment="center" />
 </LinearLayout>

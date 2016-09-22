@@ -9,82 +9,43 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tracker.expensetracker.Home_Screen">
 
+
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/linearLayout"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:weightSum="1">
-
-
+        android:weightSum="2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
 
         <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/tabHost">
-
-            <TabWidget
-            android:id="@android:id/tabs"
-            android:layout_height="wrap_content"
-                android:layout_width="fill_parent"
-            android:layout_gravity="left|bottom">
-
-
-        </TabWidget>
-
-
-        <FrameLayout
-
-            android:id="@android:id/tabcontent"
             android:layout_height="fill_parent"
-            android:layout_width="fill_parent">
+            android:id="@+id/tabHost"
+            android:weightSum="1"
+            >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:layout_gravity="left|bottom">
+            </TabWidget>
 
 
-            <LinearLayout
-                android:id="@+id/Home"
-                android:orientation="vertical"
+            <FrameLayout
+                android:id="@android:id/tabcontent"
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="476dp"
-                    android:text="This is tab 1" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/Statistics"
-                android:orientation="vertical"
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent">
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/Map"
-                android:orientation="vertical"
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent">
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/Settings"
-                android:orientation="vertical"
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent">
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/Add"
-                android:orientation="vertical"
-                android:layout_height="fill_parent"
-                android:layout_width="fill_parent">
-            </LinearLayout>
-        </FrameLayout>
+                
+            </FrameLayout>
 
 
         </TabHost>
 
     </LinearLayout>
 
-    <Test></Test>
+
 </RelativeLayout>
