@@ -19,64 +19,68 @@
         android:layout_alignParentStart="true"
         android:weightSum="1">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.19">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/budgetLabel"
-                android:layout_alignParentTop="true"
-                android:enabled="false"
-                android:text="Verbleibendes Budget"
-                android:textStyle="normal"
-                android:layout_weight="1" />
-
-            <EditText
-                android:layout_width="147dp"
-                android:layout_height="wrap_content"
-                android:inputType="numberDecimal"
-                android:ems="10"
-                android:id="@+id/outputBudget"
-                android:editable="true" />
-        </LinearLayout>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:text="Letzte Transaktionen"
-            android:textAlignment="center" />
 
         <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
-            android:layout_height="339dp"
-            android:id="@android:id/tabhost">
+            android:layout_height="wrap_content"
+            android:id="@+id/tabHost">
+
+            <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+            android:layout_gravity="left|bottom">
+
+
+        </TabWidget>
+
+
+        <FrameLayout
+
+            android:id="@android:id/tabcontent"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+
 
             <LinearLayout
-                android:id="@+id/LinearLayout01"
+                android:id="@+id/Home"
                 android:orientation="vertical"
                 android:layout_height="fill_parent"
                 android:layout_width="fill_parent">
-
-                <FrameLayout
-                    android:id="@android:id/tabcontent"
-                    android:layout_height="fill_parent"
-                    android:layout_width="fill_parent">
-
-                    <TabWidget
-                        android:id="@android:id/tabs"
-                        android:layout_height="wrap_content"
-                        android:layout_width="fill_parent"
-                        android:layout_gravity="left|bottom">
-                    </TabWidget>
-
-                </FrameLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="476dp"
+                    android:text="This is tab 1" />
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Statistics"
+                android:orientation="vertical"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent">
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Map"
+                android:orientation="vertical"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent">
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Settings"
+                android:orientation="vertical"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent">
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Add"
+                android:orientation="vertical"
+                android:layout_height="fill_parent"
+                android:layout_width="fill_parent">
+            </LinearLayout>
+        </FrameLayout>
+
 
         </TabHost>
 
