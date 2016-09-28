@@ -7,9 +7,9 @@
         android:layout_height="wrap_content"
         android:text="Monatliches Einkommen"
         android:id="@+id/textView"
+        android:layout_marginTop="47dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -20,28 +20,31 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
 
+    <Button
+        android:id="@+id/np_apply_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:layout_alignBottom="@+id/number_picker"
+        android:layout_centerHorizontal="true" />
+
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fixkosten total:"
         android:id="@+id/textView2"
-        android:layout_marginTop="36dp"
-        android:layout_below="@+id/salary"
-        android:layout_toLeftOf="@+id/textView"
-        android:layout_toStartOf="@+id/textView" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-    <Spinner
-        android:id="@+id/dayofmonth_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/fixedcosts"
-        android:layout_centerHorizontal="true" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/totalFixedcosts"
-        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignBottom="@+id/np_apply_button"
         android:layout_alignRight="@+id/salary"
         android:layout_alignEnd="@+id/salary" />
 
@@ -50,19 +53,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/fixedcosts"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="27dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
-        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
         android:id="@+id/newFixedcost"
         android:layout_alignTop="@+id/fixedcosts"
         android:layout_alignLeft="@+id/fixedcosts"
-        android:layout_alignStart="@+id/fixedcosts" />
+        android:layout_alignStart="@+id/fixedcosts"
+        android:onClick=""/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,4 +83,22 @@
         android:layout_below="@+id/textView3"
         android:layout_alignLeft="@+id/textView3"
         android:layout_alignStart="@+id/textView3" />
+
+    <NumberPicker
+        android:id="@+id/number_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:touchscreenBlocksFocus="false"
+        android:layout_below="@+id/salary"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zahltag"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/salary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp" />
+
 </RelativeLayout>

@@ -18,7 +18,7 @@ public class SettingsActivityFragment extends AppCompatActivity {
     public SettingsActivityFragment() {
 
     }
-
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,5 +32,5 @@ public class SettingsActivityFragment extends AppCompatActivity {
 
 
 
-    }
+    }*/
 }

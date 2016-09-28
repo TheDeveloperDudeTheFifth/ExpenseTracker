@@ -24,7 +24,7 @@ public class Home_Screen extends AppCompatActivity {
         //Tab 1
         TabHost.TabSpec spec = host.newTabSpec("Home");
         spec.setContent(R.id.Home);
-        spec.setIndicator("home",Drawable.createFromPath());
+        spec.setIndicator("home");
         host.addTab(spec);
 
         //Tab 2

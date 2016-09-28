@@ -96,6 +96,7 @@
                         android:layout_height="match_parent"
                         />
                 </LinearLayout>
+
             </FrameLayout>
             <TabWidget
                 android:id="@android:id/tabs"
