@@ -2,8 +2,10 @@ package com.tracker.expensetracker;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import java.util.List;
@@ -26,6 +28,8 @@ public class SettingsActivityFragment extends AppCompatActivity {
         ExpandableListView categories = (ExpandableListView) findViewById(R.id.categories);
         Button newFixedcost = (Button) findViewById(R.id.newFixedcost);
         TextView totalFixedcosts = (TextView) findViewById(R.id.totalFixedcosts);
+        Spinner spinner = (Spinner) findViewById(R.id.dayofmonth_spinner);
+
 
 
     }
