@@ -13,8 +13,8 @@ public class Home_Screen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_home__screen);
-        setContentView(R.layout.activity_screen_settings);
+        setContentView(R.layout.activity_home__screen);
+        //setContentView(R.layout.activity_screen_settings);
 
 
         TabHost host = (TabHost)findViewById(R.id.tabHost);
