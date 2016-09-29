@@ -25,28 +25,25 @@ public class Home_Screen extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.tabhost);
         tabHost = (FragmentTabHost)findViewById(R.id.tabHost);
-        tabHost.setup(this, getSupportFragmentManager(), R.id.realtabcontent);
+        tabHost.setup(this, getSupportFragmentManager(),android.R.id.tabcontent);
         assert tabHost != null;
         final Intent addIntent = new Intent(this, AddActivity.class) ;
         tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
             @Override
             public void onTabChanged(String tabId) {
                 switch(tabId){
-                    case "Home_Screen": break;
-                    case "Stats" : break;
-                    case "Map": break;
-                    case "Settings": break;
+                    case "Home_Screen": tabHost.setCurrentTab(0);break;
+                    case "Stats" :tabHost.setCurrentTab(1); break;
+                    case "Map":  tabHost.setCurrentTab(2);break;
+                    case "Settings": tabHost.setCurrentTab(3); break;
                     case "Add":
-                        startActivity(addIntent);
+                        tabHost.setCurrentTab(4);
                         break;
                 }
             }
         });
-
-
 
         //Tab 1
 
@@ -66,6 +63,8 @@ public class Home_Screen extends FragmentActivity {
 
         tabHost.addTab(tabHost.newTabSpec("Add").setIndicator("Add"),
                 AddActivity.class, null);
+
+        tabHost.setCurrentTab(0);
     }
 
     @Override
