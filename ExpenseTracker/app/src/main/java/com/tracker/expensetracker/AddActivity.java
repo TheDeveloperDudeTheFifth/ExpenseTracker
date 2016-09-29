@@ -3,6 +3,7 @@ package com.tracker.expensetracker;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.LocationManager;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -21,14 +22,14 @@ public class AddActivity extends Fragment {
     public Button btnLocate;
     public EditText textBoxLocation;
     public GeoLocationReader geoReader;
+    public GPSListener listener;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View V = inflater.inflate(R.layout.activity_add, container, false);
         LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-        final GPSListener listener = new GPSListener();
+         listener = new GPSListener();
 
         if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -40,8 +41,16 @@ public class AddActivity extends Fragment {
             // for ActivityCompat#requestPermissions for more details.
 
         }
-        //locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER, 5000, 10, listener);
+        locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER, 5000, 10, listener);
 
+
+
+        return V;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         btnLocate = (Button)getView().findViewById(R.id.btnLocate);
         btnLocate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,6 +60,5 @@ public class AddActivity extends Fragment {
         });
         textBoxLocation = (EditText) getView().findViewById(R.id.textBoxLocation);
 
-        return V;
     }
 }
