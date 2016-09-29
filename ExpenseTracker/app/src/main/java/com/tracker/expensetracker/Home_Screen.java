@@ -46,17 +46,13 @@ public class Home_Screen extends FragmentActivity {
             }
         });
 
-<<<<<<< HEAD
 
-        TabHost host = (TabHost)findViewById(R.id.tabHost);
-        host.setup();
-=======
->>>>>>> nicolas
 
         //Tab 1
+
         tabHost.addTab(tabHost.newTabSpec("Home").setIndicator("home"),
                 Home.class, null);
-        //Tab 2
+
         tabHost.addTab(tabHost.newTabSpec("Stats").setIndicator("Stats"),
                 ActivityStats.class, null);
         //Tab 3
