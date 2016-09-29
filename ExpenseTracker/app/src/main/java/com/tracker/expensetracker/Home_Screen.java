@@ -57,7 +57,7 @@ public class Home_Screen extends FragmentActivity {
                 MapsOverviewActivity.class, null);
 
         tabHost.addTab(tabHost.newTabSpec("Settings").setIndicator("Settings"),
-                SettingsActivityFragment.class, null);
+                SettingsActivity.class, null);
 
         //Tab 1
 
