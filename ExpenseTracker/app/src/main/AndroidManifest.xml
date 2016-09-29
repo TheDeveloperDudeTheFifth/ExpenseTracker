@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tracker.expensetracker">
 
+
     <application
 
         android:allowBackup="true"
@@ -17,43 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityStats" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MapsOverviewActivity"
-            android:label="@string/title_activity_maps_overview" />
-        <activity android:name=".AddActivity">
-
-
-        </activity>
-        <activity
-            android:name=".SettingsActivity" >
-            <!-- ATTENTION: This intent was auto-generated. Follow instructions at
-      https://g.co/AppIndexing/AndroidStudio to publish your URLs. -->
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <!-- ATTENTION: This data URL was auto-generated. We recommend that you use the HTTP scheme.
-                  TODO: Change the host or pathPrefix as necessary. -->
-                <data
-                    android:host="expensetracker.tracker.com"
-                    android:pathPrefix="/settings"
-                    android:scheme="http" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

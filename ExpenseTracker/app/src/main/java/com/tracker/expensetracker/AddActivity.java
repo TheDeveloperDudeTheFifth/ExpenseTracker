@@ -1,12 +1,17 @@
 package com.tracker.expensetracker;
 
+import android.*;
+import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Criteria;
+import android.location.Location;
 import android.location.LocationManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,9 +19,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.tracker.expensetracker.datahandler.GPSListener;
 import com.tracker.expensetracker.datahandler.GeoLocationReader;
+
+import java.security.Provider;
 
 public class AddActivity extends Fragment {
     public Button btnLocate;
@@ -28,23 +36,6 @@ public class AddActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View V = inflater.inflate(R.layout.activity_add, container, false);
-        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-         listener = new GPSListener();
-
-        if (ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getActivity(), android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-
-        }
-        locationManager.requestLocationUpdates(locationManager.GPS_PROVIDER, 5000, 10, listener);
-
-
-
         return V;
     }
 
@@ -55,7 +46,9 @@ public class AddActivity extends Fragment {
         btnLocate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.getLocation();
+                LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+                Criteria criteria = new Criteria();
+                String bestProvider = locationManager.getBestProvider(criteria, false);
             }
         });
         textBoxLocation = (EditText) getView().findViewById(R.id.textBoxLocation);

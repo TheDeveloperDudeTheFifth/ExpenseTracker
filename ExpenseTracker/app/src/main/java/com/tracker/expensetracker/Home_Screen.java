@@ -1,24 +1,16 @@
 package com.tracker.expensetracker;
 
-
-import android.app.ActivityManager;
-import android.app.TabActivity;
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TabHost;
-import android.widget.TextView;
+
 
 public class Home_Screen extends FragmentActivity {
     FragmentTabHost tabHost;
@@ -35,12 +27,10 @@ public class Home_Screen extends FragmentActivity {
             public void onTabChanged(String tabId) {
                 switch(tabId){
                     case "Home_Screen": tabHost.setCurrentTab(0);break;
-                    case "Stats" :tabHost.setCurrentTab(1); break;
-                    case "Map":  tabHost.setCurrentTab(2);break;
+                    case "Stats" :   tabHost.setCurrentTab(1); break;
+                    case "Map":      tabHost.setCurrentTab(2);break;
                     case "Settings": tabHost.setCurrentTab(3); break;
-                    case "Add":
-                        tabHost.setCurrentTab(4);
-                        break;
+                    case "Add":      tabHost.setCurrentTab(4); break;
                 }
             }
         });
