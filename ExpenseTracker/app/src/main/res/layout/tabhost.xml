@@ -18,6 +18,7 @@
                 android:layout_height="match_parent">
 
 
+<<<<<<< HEAD
                 <!--
                                 <LinearLayout
                                     android:id="@+id/Home"
@@ -133,7 +134,10 @@
 
 =======
 >>>>>>> master
+=======
+>>>>>>> 10137d1ab7f07eda9c6c04037858cb2b351e1c33
             </FrameLayout>
+
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
