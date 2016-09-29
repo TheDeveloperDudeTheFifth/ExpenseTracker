@@ -16,45 +16,6 @@
                 android:id="@android:id/tabcontent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:id="@+id/settings"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#f8f8ff"
-                    android:orientation="vertical">
-
-                    <include
-                        layout="@layout/activity_screen_settings"
-                        android:id="@+id/news_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/add"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#f8f8ff"
-                    android:orientation="vertical">
-
-                    <include
-                        layout="@layout/activity_add"
-                        android:id="@+id/news_title"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        />
-                </LinearLayout>
-
-
-=======
->>>>>>> master
-=======
->>>>>>> 10137d1ab7f07eda9c6c04037858cb2b351e1c33
-=======
-                
->>>>>>> a5093265bfc966038df6d536dab55ad355ce3e61
             </FrameLayout>
 
             <TabWidget
